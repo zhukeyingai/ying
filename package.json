@@ -3,7 +3,7 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://woshizhukeyingai.github.io/ying",
+  "homepage": "https://woshizhukeyingai.github.io/ying/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
