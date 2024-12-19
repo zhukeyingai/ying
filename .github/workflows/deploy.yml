@@ -31,7 +31,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: pnpm/action-setup@v2
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
           version: 8
       - name: Set up Node
@@ -41,8 +43,9 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
-      - name: Bulid
-        run: pnpm run bulid
+      - name: Build
+        run: pnpm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
