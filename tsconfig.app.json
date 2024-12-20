@@ -22,11 +22,11 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "react": ["./node_modules/@types/react"]
-    }
+    // "baseUrl": ".",
+    // "paths": {
+    //   "@/*": ["./src/*"],
+    //   "react": ["./node_modules/@types/react"]
+    // }
   },
   "include": ["src"]
 }
