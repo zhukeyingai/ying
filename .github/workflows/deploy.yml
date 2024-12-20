@@ -32,6 +32,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Print vite.config.ts content and build with logging
+        id: build_and_log
+        run: |
+          echo "=== vite.config.ts ==="
+          cat vite.config.ts
+          echo "=== End of vite.config.ts ==="
+
+          echo "Starting build..."
+          pnpm run build > build.log 2>&1 || true
+          echo "Build logs:"
+          cat build.log
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
@@ -57,14 +69,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       
-      - name: Print vite.config.ts content and build with logging
-        id: build_and_log
-        run: |
-          echo "=== vite.config.ts ==="
-          cat vite.config.ts
-          echo "=== End of vite.config.ts ==="
-
-          echo "Starting build..."
-          pnpm run build > build.log 2>&1 || true
-          echo "Build logs:"
-          cat build.log
