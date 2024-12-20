@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@douyinfe/semi-ui';
-import Card from './Layout/Card';
+import Card from '@/Layout/Card';
 
 function App() {
   const [count, setCount] = useState(0);
