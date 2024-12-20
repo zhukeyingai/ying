@@ -32,6 +32,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      
       - name: Print vite.config.ts content and build with logging
         id: build_and_log
         run: |
@@ -44,17 +56,6 @@ jobs:
           echo "Build logs:"
           cat build.log
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: 'pnpm'
-      - name: Install dependencies
-        run: pnpm install
       - name: Build
         run: pnpm run build
 
