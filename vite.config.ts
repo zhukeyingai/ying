@@ -11,4 +11,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  server: {
+    hmr: {
+      overlay: true, // 打开 Vite 默认的错误覆盖层
+    },
+  },
 });

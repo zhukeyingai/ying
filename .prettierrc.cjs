@@ -13,5 +13,5 @@ module.exports =  {
   arrowParens: 'avoid',
 
   // tailwind 类名排序 规则https://tailwindcss.com/blog/automatic-class-sorting-with-prettier#how-classes-are-sorted
-  // plugins: [require('prettier-plugin-tailwindcss')],
+  // plugins: [require('./node_modules/prettier-plugin-tailwindcss/dist/index.mjs')],
 };
