@@ -54,3 +54,22 @@ p {
   margin-block-start: 0;
   margin-block-end: 0;
 }
+
+/* 封装一些 tailwind class*/
+@layer components {
+  /* 占满容器 */
+  .tw-full {
+    width: 100%;
+    height: 100%;
+  }
+  /* flex 水平垂直居中 */
+  .tw-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* border */
+  .tw-border-normal {
+    border: 1px solid #e3e5eb;
+  }
+}
