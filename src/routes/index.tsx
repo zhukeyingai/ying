@@ -1,14 +1,21 @@
-import { RouterProvider } from 'react-router-dom';
-import router from '@/routes/router';
+import { createBrowserRouter, redirect, RouteObject } from 'react-router-dom';
+import { NavGroupList } from '@/constant/nav';
+import App from '@/app';
 
-function App() {
-  return (
-    <div className="tw-full overflow-hidden overflow-x-auto">
-      <div className="tw-full min-w-[1200px]">
-        <RouterProvider router={router} />
-      </div>
-    </div>
-  );
-}
+const routeList: RouteObject[] = [
+  {
+    path: '/',
+    element: <App />,
+    children: NavGroupList.flatMap(group =>
+      group.items.map(i => ({ path: `/${group.groupKey}${i.path}`, element: i.element })),
+    ),
+  },
+  {
+    path: '*',
+    loader: () => redirect('/'),
+  },
+];
 
-export default App;
+const router = createBrowserRouter(routeList);
+
+export default router;
