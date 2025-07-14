@@ -7,7 +7,10 @@ const routeList: RouteObject[] = [
     path: '/',
     element: <App />,
     children: NavGroupList.flatMap(group =>
-      group.items.map(i => ({ path: `/${group.groupKey}${i.path}`, element: i.element })),
+      group.items.map(i => ({
+        path: `/${group.groupKey}${i.path}`,
+        element: i.element,
+      })),
     ),
   },
   {
