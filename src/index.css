@@ -1,7 +1,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -31,7 +31,7 @@ body {
 *::-webkit-scrollbar-track {
   border-radius: 0;
   background: tgba(0, 0, 0, 0.1);
-}
+} */
 
 #root {
   width: 100%;

@@ -6,3 +6,9 @@ export interface NavItem {
   icon?: ReactNode;
   element: ReactNode;
 }
+
+export interface NavGroupItem {
+  groupKey: string;
+  groupName: string;
+  items: NavItem[];
+}
