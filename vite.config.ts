@@ -2,10 +2,12 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
+const baseUrl = '/ying/';
+
 // https://vite.dev/config/
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
   return {
-    base: '/',
+    base: mode === 'preview' ? '/' : baseUrl,
     envPrefix: 'LYNNE_',
     plugins: [
       react({
