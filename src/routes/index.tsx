@@ -4,18 +4,18 @@ import App from '@/app';
 
 const routeList: RouteObject[] = [
   {
-    path: '/',
+    path: import.meta.env.BASE_URL,
     element: <App />,
     children: NavGroupList.flatMap(group =>
       group.items.map(i => ({
-        path: `/${group.groupKey}${i.path}`,
+        path: `${import.meta.env.BASE_URL}${group.groupKey}${i.path}`,
         element: i.element,
       })),
     ),
   },
   {
     path: '*',
-    loader: () => redirect('/'),
+    loader: () => redirect(import.meta.env.BASE_URL),
   },
 ];
 
