@@ -16,7 +16,7 @@ const SideBar: FC = memo(() => {
           <div css={sideTitleStyle}>{upperCase(group.groupName)}</div>
           <div css={sideMenuStyle}>
             {group.items.map(item => (
-              <Link key={item.name} to={`/${group.groupKey}${item.path}`}>
+              <Link key={item.name} to={`${import.meta.env.BASE_URL}${group.groupKey}${item.path}`}>
                 <div dangerouslySetInnerHTML={{ __html: genRandomSvg() }} />
                 {startCase(item.name)}
               </Link>
