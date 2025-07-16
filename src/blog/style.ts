@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 
 const height = '95vh';
 const width = '65vw';
@@ -156,4 +156,33 @@ export const themeSwitchStyle = css`
   height: 16px !important;
   width: 16px !important;
   scale: 0.2;
+`;
+
+export const mainContainerStyle = css`
+  padding: 0 30px 30px;
+  overflow: auto;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    display: none;
+  }
+`;
+
+const bottomShow = keyframes`
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+`;
+
+export const animationDelay = css`
+  animation: ${bottomShow} 0.8s 0s both;
 `;

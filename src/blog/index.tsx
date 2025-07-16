@@ -1,4 +1,6 @@
+import Content from '@/blog/content';
 import Header from '@/blog/header';
+import HomePage from '@/blog/homePage';
 import SideBar from '@/blog/sideBar';
 import { containerStyle } from '@/blog/style';
 import { FC, memo } from 'react';
@@ -9,10 +11,14 @@ const Blog: FC = memo(() => {
 
   const renderContent = () => {
     if (location.pathname === import.meta.env.BASE_URL) {
-      return <div>homepage</div>;
+      return (
+        <div className="flex justify-center overflow-auto">
+          <HomePage />
+        </div>
+      );
     }
 
-    return <div>content</div>;
+    return <Content />;
   };
 
   return (

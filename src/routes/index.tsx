@@ -2,7 +2,7 @@ import { createBrowserRouter, redirect, RouteObject } from 'react-router-dom';
 import { NavGroupList } from '@/constant/nav';
 import App from '@/app';
 
-const routeList: RouteObject[] = [
+export const routeList: RouteObject[] = [
   {
     path: import.meta.env.BASE_URL,
     element: <App />,
