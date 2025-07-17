@@ -11,3 +11,6 @@ export type { ThemeWrapperProps } from './themeWrapper';
 
 export { default as Switch } from './switch';
 export type { SwitchProps } from './switch';
+
+export { Editor } from './editor';
+export type { EditorProps } from './editor';
