@@ -1,0 +1,36 @@
+GitLens — Git supercharged
+Tailwind CSS IntelliSense
+Auto Close Tag
+Auto Rename Tag
+Beautify css/sass/scss/less
+Better Comments
+Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code
+Code Spell Checker
+colorize
+CSS Peek
+Error Lens
+ES7+ React/Redux/React-Native snippets
+ESLint
+ESLint Chinese Rules
+Git History
+Github Light Theme
+Highlight Matching Tag
+Image preview
+Import Cost
+indent-rainbow
+JavaScript (ES6) code snippets
+JsonLint
+Live Server
+Markdown Preview Enhanced
+Material Icon Theme
+Path Intellisense
+Prettier - Code formatter
+Prettify JSON
+React Native Tools
+Simple React Snippets
+Time Master
+TODO Highlight
+Typescript React code snippets
+VS Code Counter
+VSCode React Refactor
+XML

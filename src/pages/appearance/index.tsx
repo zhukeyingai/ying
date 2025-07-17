@@ -1,9 +1,9 @@
 import { Assets, Switch, ThemeProvider, ThemeSwitch } from '@/ui';
 import { css } from '@emotion/react';
-import { Divider, Image, Slider } from 'antd';
+import { Divider, Image, Slider, Space } from 'antd';
 import { FC, memo, PropsWithChildren, ReactNode } from 'react';
 import { CheckCard } from '@ant-design/pro-components';
-import { fonts } from '@/constant/font';
+import { Fonts } from '@/constant/font';
 
 type BlockItemProps = PropsWithChildren<{
   label: ReactNode;
@@ -26,7 +26,7 @@ const Appearance: FC = memo(() => {
   const { typography, updateTypography, followSystem, updateIsFollowSystem } = ThemeProvider.useTheme();
 
   return (
-    <div className="flex flex-col gap-2">
+    <Space direction="vertical">
       <BlockItem label="Theme" showBottomLine>
         <ThemeSwitch
           style={css({
@@ -70,7 +70,7 @@ const Appearance: FC = memo(() => {
           value={typography.fontFamily}
           onChange={fontFamily => updateTypography({ fontFamily: fontFamily as string })}
         >
-          {fonts.map(font => (
+          {Fonts.map(font => (
             <CheckCard
               key={font}
               style={{ fontFamily: font }}
@@ -82,7 +82,7 @@ const Appearance: FC = memo(() => {
           ))}
         </CheckCard.Group>
       </BlockItem>
-    </div>
+    </Space>
   );
 });
 
