@@ -16,6 +16,12 @@ export default defineConfig(({ mode }) => {
   return {
     base: mode === 'preview' ? '/' : baseUrl,
     envPrefix: 'LYNNE_',
+    build: {
+      commonjsOptions: {
+        transformMixedEsModules: true,
+      },
+      target: 'ESNext',
+    },
     plugins: [
       mdx({
         jsxImportSource: '@emotion/react',

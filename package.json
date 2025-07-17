@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "tsc && vite build --mode=preview && vite preview --mode=preview"
   },
   "dependencies": {
     "@ant-design/icons": "5.x",
