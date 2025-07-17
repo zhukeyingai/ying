@@ -26,7 +26,7 @@ const Blog: FC = memo(() => {
       <SideBar />
       <div className="flex flex-1 flex-col">
         <Header />
-        {renderContent()}
+        {/* {renderContent()} */}
       </div>
     </div>
   );

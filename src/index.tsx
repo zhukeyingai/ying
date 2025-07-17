@@ -9,7 +9,6 @@ import 'tailwindcss/utilities.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* <RouterProvider router={router} /> */}
-    hello word
+    <RouterProvider router={router} />
   </StrictMode>,
 );
