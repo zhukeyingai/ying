@@ -12,6 +12,7 @@ const App: FC = memo(() => {
       <AppWrapper className="h-full">
         <div className="h-full tw-flex-center">
           <Blog />
+          {/* TODO: CMD Modal */}
         </div>
       </AppWrapper>
     </ThemeProvider>
