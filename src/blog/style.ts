@@ -152,7 +152,7 @@ export const userNameStyle = css`
 `;
 
 export const themeSwitchStyle = css`
-  margin-left: 32px;
+  margin: 0 20px 0 32px;
   height: 16px !important;
   width: 16px !important;
   scale: 0.2;

@@ -9,7 +9,7 @@ import {
 import { Hotkey } from '@/constant/hotkey';
 import { OpenTypeConfig } from '@/interface/modalOpenConfig';
 import { useModalOpen } from '@/store/useModalOpenConfigModel';
-import ThemeSwitch from '@/ui/themeSwitch';
+import { ThemeSwitch } from '@/ui';
 import { GithubOutlined } from '@ant-design/icons';
 import { css } from '@emotion/react';
 import { Divider } from 'antd';
