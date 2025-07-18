@@ -43,10 +43,6 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
-      - name: Refresh 404
-        run: |
-          cd dist
-          cp index.html 404.html
       # - name: Print environment variables
       #   run: |
       #     echo "PNPM_HOME: $PNPM_HOME"
@@ -64,6 +60,10 @@ jobs:
       #     cat build.log
       - name: Build
         run: pnpm run build
+      - name: Refresh 404
+        run: |
+          cd dist
+          cp index.html 404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
