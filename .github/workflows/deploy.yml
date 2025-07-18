@@ -43,6 +43,10 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
+      - name: Refresh 404
+        run: |
+          cd dist
+          cp index.html 404.html
       # - name: Print environment variables
       #   run: |
       #     echo "PNPM_HOME: $PNPM_HOME"
